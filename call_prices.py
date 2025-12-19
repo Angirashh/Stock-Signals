@@ -9,9 +9,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# BOT_TOKEN = os.getenv("BOT_TOKEN")
-# CHAT_ID = os.getenv("CHAT_ID")
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+CHAT_ID = os.getenv("CHAT_ID")
 
+print(BOT_TOKEN, CHAT_ID)
 BOT_TOKEN = "8254287542:AAEoVHtqwTrSSWpL06Fn58_lRsBVoNw5DEQ"
 CHAT_ID = "-5037219263"
 
@@ -45,5 +46,6 @@ for x in df['TICKER']:
     print(f'now calculating for {x}')
     calculate(x,BOT_TOKEN,CHAT_ID)
 send_telegram_alert(BOT_TOKEN, CHAT_ID, f'Ran for US market on {str(today)}')
+
 
 
