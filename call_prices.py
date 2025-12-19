@@ -41,6 +41,4 @@ df=pd.read_csv('hello.csv')
 for x in df['TICKER']:
     print(f'now calculating for {x}')
     calculate(x,BOT_TOKEN,CHAT_ID)
-send_telegram_alert(BOT_TOKEN, CHAT_ID, f'Ran for US market on {str(today)}')
-
- 
+send_telegram_alert(BOT_TOKEN, CHAT_ID, f'Ran for {str(today)}')
